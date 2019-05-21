@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerController : BaseController
 {
     private Rigidbody rbody;
-
+    public Transform bullet_startpoint;
+    public GameObject bullet_prefab;
+    public ParticleSystem shootFX;
 
     // Start is called before the first frame update
     void Awake()
@@ -16,6 +18,7 @@ public class PlayerController : BaseController
     // Update is called once per frame
     void Update()
     {
+        ShootingControl();
         ControlMovementWithKeyboard();
         ChangeRotation();
     }
@@ -74,6 +77,14 @@ public class PlayerController : BaseController
                 Quaternion.Euler(0f, 0f, 0f), 
                 Time.deltaTime * rotationSpeed
             );
+        }
+    }
+
+    public void ShootingControl(){
+        if(Input.GetMouseButtonDown(0)){
+            GameObject bullet = Instantiate(bullet_prefab, bullet_startpoint.position, Quaternion.identity);
+            bullet.GetComponent<BulletScript>().Move(2000f);
+            shootFX.Play();
         }
     }
 }
