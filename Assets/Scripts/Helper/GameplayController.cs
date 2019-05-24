@@ -7,7 +7,7 @@ public class GameplayController : MonoBehaviour
     public static GameplayController instance;
     public GameObject[] obstaclePrefabs, zombiePrefabs;
     public Transform[] lanes;
-    public float min_obstacle_delay = 10f, max_obstacle_delay = 40f;
+    public float min_obstacle_delay = 5f, max_obstacle_delay = 25f;
 
     private float half_ground_size;
     private BaseController playerController;
@@ -67,7 +67,11 @@ public class GameplayController : MonoBehaviour
                 zombieLane = Random.Range(0, 2) == 1 ? 1 : 0;
             }
             AddZombies(
-                new Vector3(lanes[obstacleLane].transform.position.x, 0.15f, zPos)
+                new Vector3(
+                    lanes[obstacleLane].transform.position.x, 
+                    0.15f, 
+                    zPos
+                )
             );
         }
     }

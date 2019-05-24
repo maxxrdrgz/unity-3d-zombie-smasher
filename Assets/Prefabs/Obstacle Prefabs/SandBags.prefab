@@ -13,6 +13,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.6, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: -1.04}
+--- !u!114 &7306853163589474547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541160018161889462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff9d872a3c385b40bb5d0b4391b625d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
+    type: 3}
+  damage: 20
 --- !u!1001 &3541160018161923606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23,6 +38,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e15531c9132c63e4ab8ffab6821103d1, type: 3}
       propertyPath: m_Name
       value: SandBags
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e15531c9132c63e4ab8ffab6821103d1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e15531c9132c63e4ab8ffab6821103d1, type: 3}
       propertyPath: m_LocalPosition.x

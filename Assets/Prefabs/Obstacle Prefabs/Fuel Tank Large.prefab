@@ -109,6 +109,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.339462, y: 6.190515, z: 15.736342}
   m_Center: {x: 0, y: 3.0952575, z: -0.46820065}
+--- !u!114 &-2879757878650844462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6702866805425385241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff9d872a3c385b40bb5d0b4391b625d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
+    type: 3}
+  damage: 20
 --- !u!1001 &6702866805425351097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,6 +134,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 78609260395dcab43b80013803e64a14, type: 3}
       propertyPath: m_Name
       value: Fuel Tank Large
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 78609260395dcab43b80013803e64a14, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78609260395dcab43b80013803e64a14, type: 3}
       propertyPath: m_LocalPosition.x

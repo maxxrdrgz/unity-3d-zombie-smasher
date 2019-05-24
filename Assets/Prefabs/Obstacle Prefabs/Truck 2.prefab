@@ -13,6 +13,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.422969, y: 4.3932605, z: 10.811963}
   m_Center: {x: 0, y: 2.1966302, z: 0.00000023841856}
+--- !u!114 &1775867143940157013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8598439871652784785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff9d872a3c385b40bb5d0b4391b625d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
+    type: 3}
+  damage: 20
 --- !u!1001 &8598439871652752437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23,6 +38,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: 0e34577da2edb034e85996d04164266e, type: 3}
       propertyPath: m_Name
       value: Truck 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 0e34577da2edb034e85996d04164266e, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e34577da2edb034e85996d04164266e, type: 3}
       propertyPath: m_LocalPosition.x

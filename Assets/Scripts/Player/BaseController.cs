@@ -37,10 +37,10 @@ public class BaseController : MonoBehaviour
     protected void MoveNormal(){
         if(is_slow){
             is_slow = false;
-            soundManager.Stop();
-            soundManager.clip = engine_on_sound;
-            soundManager.volume = 0.3f;
-            soundManager.Play();
+            // soundManager.Stop();
+            // soundManager.clip = engine_on_sound;
+            // soundManager.volume = 0.3f;
+            // soundManager.Play();
         }
         speed = new Vector3(speed.x, 0f, z_speed);
     }
@@ -48,10 +48,10 @@ public class BaseController : MonoBehaviour
     protected void MoveSlow(){
         if(!is_slow){
             is_slow = true;
-            soundManager.Stop();
-            soundManager.clip = engine_off_sound;
-            soundManager.volume = 0.3f;
-            soundManager.Play();
+            // soundManager.Stop();
+            // soundManager.clip = engine_off_sound;
+            // soundManager.volume = 0.3f;
+            // soundManager.Play();
         }
         speed = new Vector3(speed.x, 0f, deccelerated);
     }
