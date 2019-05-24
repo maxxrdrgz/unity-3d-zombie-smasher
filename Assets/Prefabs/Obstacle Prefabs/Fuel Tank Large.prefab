@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &820862552
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6702866805425385241}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.339462, y: 6.190515, z: 15.736342}
-  m_Center: {x: 0, y: 3.0952575, z: -0.46820065}
 --- !u!82 &820862551
 AudioSource:
   m_ObjectHideFlags: 0
@@ -109,6 +96,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &820862552
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6702866805425385241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.339462, y: 6.190515, z: 15.736342}
+  m_Center: {x: 0, y: 3.0952575, z: -0.46820065}
 --- !u!1001 &6702866805425351097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,15 +122,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78609260395dcab43b80013803e64a14, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.10048119
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78609260395dcab43b80013803e64a14, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.20004642
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78609260395dcab43b80013803e64a14, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.285165
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78609260395dcab43b80013803e64a14, type: 3}
       propertyPath: m_LocalRotation.x
