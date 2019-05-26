@@ -55,7 +55,7 @@ public class ZombieScript : MonoBehaviour
                 Quaternion.identity
             );
             Invoke("DeactivateGameobject", 3f);
-            //increase score
+            GameplayController.instance.IncreaseScore();
             Die();
         }
     }

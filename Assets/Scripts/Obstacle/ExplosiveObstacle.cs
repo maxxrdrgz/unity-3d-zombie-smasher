@@ -14,7 +14,7 @@ public class ExplosiveObstacle : MonoBehaviour
                 transform.position,
                 Quaternion.identity
             );
-            //deal player damage
+            other.gameObject.GetComponent<PlayerHealth>().ApplyDamage(damage);
             gameObject.SetActive(false);
         }
 
