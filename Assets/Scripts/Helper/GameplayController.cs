@@ -9,7 +9,7 @@ public class GameplayController : MonoBehaviour
     public static GameplayController instance;
     public GameObject[] obstaclePrefabs, zombiePrefabs;
     public Transform[] lanes;
-    public float min_obstacle_delay = 1f, max_obstacle_delay = 45f;
+    public float min_obstacle_delay = 10f, max_obstacle_delay = 40f;
 
     private float half_ground_size;
     private Image shoot_btn;
@@ -58,8 +58,8 @@ public class GameplayController : MonoBehaviour
     IEnumerator GenerateObstacles(){
         float timer = Random.Range(
             min_obstacle_delay, 
-            max_obstacle_delay/playerController.speed.z
-        );
+            max_obstacle_delay
+        )/playerController.speed.z;
         print("timer is " + timer);
         yield return new WaitForSeconds(timer);
         CreateObstacles(
