@@ -12,6 +12,7 @@ public class GameplayController : MonoBehaviour
     public float min_obstacle_delay = 1f, max_obstacle_delay = 45f;
 
     private float half_ground_size;
+    private Image shoot_btn;
     private BaseController playerController;
     private Text score_text;
     private int zombie_kill_count;
@@ -33,6 +34,10 @@ public class GameplayController : MonoBehaviour
         half_ground_size = GameObject
             .Find("GroundBlock Main")
             .GetComponent<GroundBlock>().halfLength;
+        
+        shoot_btn = GameObject
+            .Find("ShootBtn")
+            .GetComponent<Image>();
 
         playerController = GameObject
             .FindGameObjectWithTag("Player")
@@ -154,17 +159,19 @@ public class GameplayController : MonoBehaviour
 
     public void PauseGame(){
         pause_panel.SetActive(true);
+        shoot_btn.raycastTarget = false;
         Time.timeScale = 0f;
     }
 
     public void ResumeGame(){
         pause_panel.SetActive(false);
+        shoot_btn.raycastTarget = true;
         Time.timeScale = 1f;
     }
 
     public void ExitGame(){
         Time.timeScale = 1f;
-        //SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void GameOver(){
