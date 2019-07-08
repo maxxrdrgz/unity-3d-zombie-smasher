@@ -22,6 +22,11 @@ public class GroundBlock : MonoBehaviour
         MoveGround();
     }
 
+    /**
+        Detects if the player's transform position is greater than the half of
+        the length of the ground block. If so, move the other block in front of
+        the player.
+    */
     void MoveGround(){
         if(transform.position.z + halfLength < 
            player.transform.position.z - endoffset){
