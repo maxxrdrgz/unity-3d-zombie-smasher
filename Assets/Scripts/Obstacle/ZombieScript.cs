@@ -28,7 +28,13 @@ public class ZombieScript : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
+    /**
+        This function stops the zombie from moving and also disables the
+        collider, making the zombie fall through the floor. The rotation is
+        changed to give the appearance that the zombie has been ran over and the
+        scale is changed to give the appearence that the zombie has been
+        smashed.
+    */
     void Die(){
         is_alive = false;
         rbody.velocity = Vector3.zero;
@@ -43,10 +49,22 @@ public class ZombieScript : MonoBehaviour
         );
     }
 
+    /** 
+        Deactivates the gameobject this script is attached to.
+    */
     void DeactivateGameobject(){
         gameObject.SetActive(false);
     }
 
+    /** 
+        This function detects if the zombie has collided with either the player
+        or the bullet gameobject.!-- If so, the bloodFX prefab is instantiated,
+        the zombie is deactived after a 3 second delay, the score is increased
+        and finally the die() function is called to animate the zombie's death.
+
+        @param {Collision} The Collision data associated with this collision 
+        event.
+    */
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "Bullet"){
             Instantiate(

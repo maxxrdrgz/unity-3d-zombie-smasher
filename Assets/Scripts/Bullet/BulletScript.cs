@@ -23,7 +23,8 @@ public class BulletScript : MonoBehaviour
         Detects collision with gameobjects with the obstacle tag. If so,
         the bullet gets deactivated.
 
-        @param {Collision} The other Collider2D involved in this collision
+        @param {Collision} The Collision data associated with this collision 
+        event.
     */
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Obstacle"){
