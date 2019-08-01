@@ -15,7 +15,10 @@ public class PlayerController : BaseController
     [HideInInspector]
     public bool canShoot;
 
-    // Start is called before the first frame update
+    /** 
+        At the start, this function will add the ShootingControl listener to the
+        shootbtn gameobject and get a few components.
+    */
     void Start()
     {
         rbody = GetComponent<Rigidbody>();
@@ -28,7 +31,6 @@ public class PlayerController : BaseController
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         ControlMovementWithKeyboard();
@@ -38,11 +40,18 @@ public class PlayerController : BaseController
     private void FixedUpdate() {
         MoveTank();
     }
-
+    
+    /** 
+        Moves the rigid body of the tank forward.
+    */
     void MoveTank(){
         rbody.MovePosition(rbody.position + speed * Time.deltaTime);
     }
 
+    /** 
+        Get's input from the keyboard. Depeneding on the input, the appropriate
+        function is called from BaseController.
+    */
     void ControlMovementWithKeyboard(){
         if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)){
             MoveLeft();
@@ -70,6 +79,11 @@ public class PlayerController : BaseController
         }
     }
 
+    /** 
+        This function will slightly rotate the position of the tank either
+        left or right depending on the speed of x. Otherwise the tank will
+        remain straight.
+    */
     void ChangeRotation(){
         if(speed.x > 0){
             transform.rotation = Quaternion.Slerp(
@@ -92,6 +106,12 @@ public class PlayerController : BaseController
         }
     }
 
+    /** 
+        This function will create the shooting effect for the tank. If the game
+        is not paused, and canshoot is true, the bullet gameobject will be
+        created and moved. The canshoot is reset in the AnimationEvents.cs found
+        in the Helper folder.
+    */
     public void ShootingControl(){
         if(Time.timeScale != 0){
             if(canShoot){

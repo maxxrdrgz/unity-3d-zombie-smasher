@@ -19,6 +19,12 @@ public class PlayerHealth : MonoBehaviour
         UI_Holder = GameObject.Find("UI Holder");
     }
 
+    /** 
+        This function will decrease the player health, update the visual health
+        bar and call the game over function if the health is 0.
+
+        @param {int} The amount of damage to apply to player health
+    */
     public void ApplyDamage(int damageAmount){
         health -= damageAmount;
         if(health < 0){
